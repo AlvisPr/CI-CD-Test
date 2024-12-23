@@ -10,13 +10,6 @@ afterAll((done) => {
   server.close(done);
 });
 
-beforeAll((done) => {
-  server = app.listen(3000, done);
-});
-
-afterAll((done) => {
-  server.close(done);
-})
 describe('GET /', () => {
   it('responds with Hello World!', async () => {
     const response = await request(app).get('/');
